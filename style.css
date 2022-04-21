@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-
 }
 
 body{
@@ -134,10 +133,10 @@ body{
     padding: 0.4rem;
 }
 
- .main-cont {
+.main-cont {
      display: flex;
      flex-wrap: wrap;
      padding: 2rem;
      gap:2rem;
      justify-content: center;
- }
+}
