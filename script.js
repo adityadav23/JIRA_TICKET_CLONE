@@ -19,6 +19,8 @@ allPriorityColors.forEach((colorElem, index)=>{
             priorityColorElem.classList.remove("border")
         })
         colorElem.classList.add("border")
+
+        modalPriorityColor = colorElem.classList[0]
     })
 })
 
@@ -39,22 +41,23 @@ addBtn.addEventListener('click', (e)=>{
 modalCont.addEventListener('keydown',(e)=>{
     let key = e.key
     if(key === "Shift"){
-        createTicket()
+        createTicket(modalPriorityColor, textAreaCont.value, shortid())
         addFlag = false
         modalCont.style.display =  "none"
 
     }
 })
 
-function createTicket(){
+function createTicket(ticketColor, ticketTask, ticketId){
     let ticketCont = document.createElement("div")
     ticketCont.setAttribute("class", "ticket-cont")
     ticketCont.innerHTML =`
-        <div class="ticket-color"></div>
-        <div class="ticket-id">#qwerrt</div>
+        <div class="ticket-color ${ticketColor}"></div>
+        <div class="ticket-id">#${ticketId}</div>
         <div class="task-cont"></div>
         <div class="task-area">
-        This is the text area</div>`;
+        ${ticketTask}
+        </div>`;
 
     mainCont.appendChild(ticketCont)
 }
