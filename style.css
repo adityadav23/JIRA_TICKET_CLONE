@@ -124,12 +124,15 @@ body{
 .ticket-id {
     height: 2rem;
     padding: 0.4rem;
+    background-color: rgb(240, 231, 229);
+
 }
 
 .task-area {
     height: calc(100% - 2rem - 1rem - 2rem);
-    background-color: lightsalmon;
+    background-color: rgb(206, 198, 196);
     padding: 0.4rem;
+    outline: none;
 }
 
 .ticket-lock {
